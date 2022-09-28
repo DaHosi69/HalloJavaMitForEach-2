@@ -1,9 +1,15 @@
 package com.company;
 
 public class NumberTester {
+private String filename;
+private NumberTest oddTester;
+private NumberTest primeTester;
+private NumberTest palindromeTester;
+private String path;
+
     public NumberTester(String fileName)
     {
-
+        path = fileName;
     }
 
     public void setOddEvenTester(NumberTest oddTester)
