@@ -31,9 +31,16 @@ private String path;
         this.palindromeTester = palindromeTester;
     }
 
+    public static void main(String[] args)
+    {
+        String s = "";
+        new NumberTester(s).testFile();
+
+    }
+
     public void testFile()
     {
-        File file = new File("data.csv");
+        File file = new File("C:\\Users\\hosne\\Desktop\\Git\\HalloJavaMitForEach\\HalloJavaMitForEach\\src\\com\\company\\data.csv");
         try {
 
             Scanner s = new Scanner(file);
@@ -53,18 +60,52 @@ private String path;
 
                            else
                            {
-                               System.out.println("NOT EVEN");
+                               System.out.println("ODD");
                                return false;
                            }
                        });
+                       oddTester.testNumber(testerNum);
                         break;
                     case 2:
                         testerNum = s.nextInt();
+                        setPrimeTester(primeTester -> {
+                            for (int t=2; t<= Math.sqrt(testerNum); t++) {
+                                if(testerNum%t == 0){
+                                    System.out.println("NO PRIME");
+                                    return false;
+                                }
+                                else
+                                {
+                                    System.out.println("PRIME");
+                                    return true;
+                                }
 
+                            }
+                            return false;
+                        });
+                        primeTester.testNumber(testerNum);
                         break;
+
                     case 3:
                         testerNum = s.nextInt();
-
+                        String numberStr = String.valueOf(testerNum);
+                        setPalindromeTester(primeTester -> {
+                            String normal = "",umgekehrt = "";
+                            int length = numberStr.length();
+                            normal = numberStr;
+                            for ( int k = length -1;k >= 0; k--)
+                                umgekehrt = umgekehrt + normal.charAt(k);
+                            if (normal.equals(umgekehrt)){
+                                System.out.println("PALINDROME");
+                                return true;
+                            }
+                            else
+                            {
+                                System.out.println("NO PALINDROME");
+                                return false;
+                            }
+                        });
+                        palindromeTester.testNumber(testerNum);
                         break;
                 }
             }
