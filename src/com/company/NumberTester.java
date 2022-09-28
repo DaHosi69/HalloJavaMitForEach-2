@@ -3,6 +3,7 @@ package com.company;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class NumberTester {
 private String filename;
