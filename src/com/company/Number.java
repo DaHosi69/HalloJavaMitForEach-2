@@ -7,7 +7,7 @@ public class Number
 
     public Number(double a, double b) {
         this.a = a;
-
+        this.b = b;
     }
 
     public double getA() {
