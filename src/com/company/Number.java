@@ -5,7 +5,8 @@ public class Number
     private double a;
     private double b;
 
-    public Number(double v, double v1) {
+    public Number(double a, double b) {
+        this.a = a;
 
     }
 
