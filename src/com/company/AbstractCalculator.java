@@ -21,3 +21,4 @@ public abstract class AbstractCalculator
     public abstract Number divide(Number a, Number b);
 
 }
+
