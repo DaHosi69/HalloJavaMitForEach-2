@@ -5,6 +5,10 @@ public class Number
     private double a;
     private double b;
 
+    public Number(double v, double v1) {
+
+    }
+
     public double getA() {
         return a;
     }
