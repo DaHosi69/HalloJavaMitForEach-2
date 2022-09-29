@@ -31,12 +31,10 @@ public class Main {
                     System.out.println(" ");
                     break;
                 case 2:
-                    System.out.println(" ");
-                    System.out.println("2");
+
                     break;
                 case 3:
-                    System.out.println(" ");
-                    System.out.println("3");
+
                     break;
 
             }
